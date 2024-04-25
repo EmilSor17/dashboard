@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .register-form {
+    width: 300px; /* Ancho deseado del formulario */
+  }
+  
+  .form-group {
+    margin-bottom: 20px; /* Espacio entre los elementos del formulario */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  h1 {
+    text-align: center;
+  }
+  
+  
