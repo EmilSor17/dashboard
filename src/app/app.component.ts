@@ -23,14 +23,17 @@ export class AppComponent {
       user: this.username,
       password: this.password
     };
-  
     this.authService.getToken(credentials).subscribe({
       next: (response) => {
         const token = response.token;
         localStorage.setItem('token', token);
-        this.router.navigate(['/:board']);
-        console.log("aaa");
-        
+        this.router.navigate(['board'])
+          .then(() => {
+            console.log('Navegación exitosa');
+          })
+          .catch((error) => {
+            console.error('Error al navegar:', error);
+          });
       },
       error: (error) => {
         if (error.status != 200) {
